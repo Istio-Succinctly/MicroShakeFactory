@@ -1,4 +1,4 @@
-ARG app_version=1
+ARG app_version="1"
 
 # Compile stage
 FROM node:12-alpine AS build-stage
@@ -14,7 +14,7 @@ RUN tsc --build --clean && tsc --outDir dist --sourceMap false
 FROM node:12-alpine AS build-prod
 EXPOSE 3000
 ENV NODE_ENV=production
-ENV App_Ver ${app_version}
+ENV App_Ver=${app_version}
 WORKDIR /src
 COPY --from=build-stage ./src/dist/app ./app
 COPY --from=build-stage ./src/node_modules ./node_modules

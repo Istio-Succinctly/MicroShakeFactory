@@ -1,0 +1,17 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "es6",
+    "watch": false,
+    "module": "commonjs",
+    "sourceMap": true,
+    "removeComments": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "moduleResolution": "node",
+    "alwaysStrict": true
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["logs", "node_modules"]
+}
