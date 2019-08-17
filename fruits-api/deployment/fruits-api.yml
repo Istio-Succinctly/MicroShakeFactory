@@ -1,0 +1,71 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fruits-api-deployment
+  labels:
+    app: fruits-api
+spec:
+  selector:
+    matchLabels:
+      app: fruits-api
+  replicas: 2
+  minReadySeconds: 1
+  progressDeadlineSeconds: 600
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  template:
+    metadata:
+      labels:
+        app: fruits-api
+    spec:
+      containers:
+        - name: fruits-api
+          image: "fruits-api:latest"
+          imagePullPolicy: Always
+          resources:
+            limits:
+              cpu: 1000m
+              memory: 1024Mi
+            requests:
+              cpu: 100m
+              memory: 100Mi
+          ports:
+            - name: fruits-api-service
+              containerPort: 443
+          env:
+            - name: Version
+              value: "1.0"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: fruits-api-service
+spec:
+  selector:
+    app: fruits-api
+  ports:
+    - name: https-fruits-api-service
+      port: 443
+      targetPort: fruits-api-service
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: fruits-api--virtual-service
+  namespace: dev
+spec:
+  gateways:
+  - mesh
+  hosts:
+  - "fruits-api-service.dev.svc.cluster.local"
+  http:
+  - match:
+    - port: 443
+    route:
+    - destination:
+        host: "fruits-api-service.dev.svc.cluster.local"
+---
