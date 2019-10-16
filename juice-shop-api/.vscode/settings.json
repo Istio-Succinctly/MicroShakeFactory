@@ -1,0 +1,24 @@
+{
+  "cSpell.words": [
+    "Istio",
+    "Serializers",
+    "healthz",
+    "lcov",
+    "parentspanid",
+    "quotemark",
+    "spanid",
+    "traceid"
+  ],
+  "explorer.openEditors.visible": 0,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "app/**/*.js": true,
+    "app/**/*.map": true,
+    "test/**/*.js": true,
+    "test/**/*.map": true
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
+}
