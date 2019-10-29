@@ -39,8 +39,8 @@ The capabilities of Istio can be adequately demonstrated with a set of services 
 
 The Docker container images of the microservices are present at the following locations:
 
-1. **Fruits API**: [Link](https://cloud.docker.com/u/istiosuccinctly/repository/docker/istiosuccinctly/fruits-api)
-2. **Juice Shop API**: [Link](https://cloud.docker.com/u/istiosuccinctly/repository/docker/istiosuccinctly/juice-shop-api)
+1. **Fruits API**: [Link](https://hub.docker.com/r/istiosuccinctly/fruits-api)
+2. **Juice Shop API**: [Link](https://hub.docker.com/r/istiosuccinctly/juice-shop-api)
 
 ## Building the application
 
