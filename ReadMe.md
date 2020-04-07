@@ -1,6 +1,8 @@
 # Micro Shake Factory
 
-> Companion repo for the title **Istio Succinctly** by Syncfusion
+> Companion repo for the title [**Istio Succinctly**](https://www.syncfusion.com/ebooks/istio-succinctly) by Syncfusion.
+
+[![cover](images/Banner.jpg)](https://www.syncfusion.com/ebooks/kubernetes-succinctly)
 
 This is a monorepo that contains the code of two REST microservices viz. **fruits-api** and **juice-shop-api**. Collectively these microservices form the _Micro Shake Factory_ application.
 
