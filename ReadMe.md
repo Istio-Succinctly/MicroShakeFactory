@@ -10,9 +10,7 @@ This is a monorepo that contains the code of two REST microservices viz. **fruit
 
 ## Istio Succinctly
 
-Download Istio Succinctly for free from Syncfusion.
-
-> Placeholder for image
+Download [**Istio Succinctly**](https://www.syncfusion.com/ebooks/istio-succinctly) for free from Syncfusion.
 
 ## Getting started
 
